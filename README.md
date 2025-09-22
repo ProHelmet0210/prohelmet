@@ -14,8 +14,8 @@
       font-family:"Georgia Pro", Georgia, "Times New Roman", serif; line-height:1.6;
     }
     .wrap{max-width:var(--wrap); margin:0 auto; padding:18px 16px 72px}
-    header{padding:28px 0 8px; text-align:center}
-    header img{max-width:520px; width:85%; height:auto; display:inline-block}
+    header{padding:20px 0 8px; text-align:center}
+    header img{max-width:600px; width:100%; height:auto; display:inline-block}
     .nav{position:sticky; top:0; z-index:10; background:rgba(0,0,0,.9);
          border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
     .nav-inner{max-width:var(--wrap); margin:0 auto; padding:10px 16px; text-align:center}
