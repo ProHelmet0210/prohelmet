@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -13,34 +14,49 @@
       margin:0; background:var(--bg); color:var(--text);
       font-family:"Georgia Pro", Georgia, "Times New Roman", serif; line-height:1.6;
     }
-    .wrap{max-width:var(--wrap); margin:0 auto; padding:18px 16px 72px}
-    header{padding:20px 0 8px; text-align:center}
-    header img{max-width:600px; width:100%; height:auto; display:inline-block}
-    .nav{position:sticky; top:0; z-index:10; background:rgba(0,0,0,.9);
-         border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
-    .nav-inner{max-width:var(--wrap); margin:0 auto; padding:10px 16px; text-align:center}
+
+    /* CHANGED: slightly tighter overall padding */
+    .wrap{max-width:var(--wrap); margin:0 auto; padding:12px 12px 48px}
+
+    /* CHANGED: smaller header paddings + make banner fill the content width */
+    header{padding:16px 0 6px; text-align:center}
+    header img{
+      display:block;
+      width:100%;        /* fill the container so it matches the divider width */
+      max-width:100%;    /* don’t clamp smaller than container */
+      height:auto;
+      margin:0 auto;
+    }
+
+    .nav{
+      position:sticky; top:0; z-index:10; background:rgba(0,0,0,.9);
+      border-top:1px solid var(--line); border-bottom:1px solid var(--line)
+    }
+    /* CHANGED: slightly tighter nav padding */
+    .nav-inner{max-width:var(--wrap); margin:0 auto; padding:8px 12px; text-align:center}
     .nav a{color:var(--teal); text-decoration:none; padding:6px 8px; margin:0 6px; border-radius:8px}
     .nav a:hover,.nav a:focus{background:#0b0f14; outline:none; text-decoration:underline; text-underline-offset:3px}
     .bar{color:var(--muted); margin:0 2px; user-select:none}
-    section{scroll-margin-top:84px; padding:26px 0; border-bottom:1px solid var(--line)}
+
+    /* CHANGED: slightly tighter section padding */
+    section{scroll-margin-top:84px; padding:20px 0; border-bottom:1px solid var(--line)}
     h1,h2{color:var(--teal); margin:0 0 10px; line-height:1.25}
     h3{color:var(--teal); margin:6px 0}
     p{margin:0 0 12px}
     ul{margin:8px 0 12px 20px}
     li{margin:6px 0}
-    footer{text-align:center; color:var(--muted); padding:26px 0 8px; font-size:.95rem}
+    footer{text-align:center; color:var(--muted); padding:22px 0 8px; font-size:.95rem}
   </style>
 </head>
 <body>
 
   <div class="wrap">
-    <!-- Top banner -->
+    <!-- Top banner (now full width of the content area) -->
     <header>
       <img src="assets/ProHelmet_Main.gif" alt="ProHelmet">
     </header>
   </div>
 
-  <!-- In-page navigation -->
   <nav class="nav" aria-label="Sections">
     <div class="nav-inner">
       <a href="#about">About ProHelmet</a><span class="bar">|</span>
@@ -53,6 +69,7 @@
   </nav>
 
   <div class="wrap">
+    <!-- (keep the rest of your sections exactly as you already have them) -->
     <!-- About -->
     <section id="about">
       <h2>About ProHelmet</h2>
@@ -88,15 +105,67 @@
     <!-- Terms -->
     <section id="terms">
       <h2>Terms &amp; Conditions</h2>
-
       <h3>Service Use</h3>
       <ul>
         <li>ProHelmet sanitizes and refreshes helmets.</li>
         <li>It is not intended to remove existing stains, scratches, or marks.</li>
         <li>For best upkeep, please wipe your helmet daily between sanitizing cycles.</li>
       </ul>
-
       <h3>Automation &amp; Connectivity</h3>
       <ul>
-        <li>The machine is
+        <li>The machine is fully automated. If there are brief lags or connectivity glitches, please allow the system a moment to recover and follow on-screen instructions patiently.</li>
+        <li>If a cycle does not start or complete due to a technical issue, reach out to us right away.</li>
+      </ul>
+      <h3>Payments</h3>
+      <ul>
+        <li>Payments are processed securely by trusted partners such as Razorpay. We do not store card or bank details.</li>
+        <li>If you face any payment issue (failed/duplicate charge, charged but service not delivered), contact us immediately for checks and prompt refunds when applicable.</li>
+        <li>Once a cleaning cycle has successfully begun, payments are generally non-refundable.</li>
+      </ul>
+      <h3>Liability</h3>
+      <ul>
+        <li>We handle your helmet with care, but we are not responsible for pre-existing damage, normal wear and tear, or user mishandling.</li>
+      </ul>
+      <h3>Public Use</h3>
+      <ul>
+        <li>ProHelmet kiosks are placed in unmanned public spaces. Please use them responsibly.</li>
+        <li>Intentional misuse or damage may lead to necessary legal action.</li>
+      </ul>
+      <h3>Business Owners</h3>
+      <ul>
+        <li>For kiosk setups, pricing and terms may vary. Contact <strong>9849080443</strong> or <strong>prohelmet.protoptye@gmail.com</strong> for a customized agreement.</li>
+      </ul>
+      <h3>Updates</h3>
+      <p>We may update these terms from time to time. Continued use means you accept the latest version.</p>
+    </section>
 
+    <!-- Refunds -->
+    <section id="refunds">
+      <h2>Refunds</h2>
+      <h3>For Users</h3>
+      <ul>
+        <li>Once a cleaning cycle successfully begins, the payment is non-refundable.</li>
+        <li>If your payment is charged but the cycle does not start, please contact us immediately at <strong>9849080443</strong> or <strong>prohelmet.protoptye@gmail.com</strong>. We will verify and process a refund promptly.</li>
+        <li>Refunds are always returned through the same payment method you used.</li>
+      </ul>
+      <h3>For Business Owners</h3>
+      <ul>
+        <li>Advance payments or kiosk setup fees are subject to the specific agreement shared at the time of onboarding.</li>
+        <li>Refunds (if any) will follow the terms of that agreement.</li>
+        <li>For any concerns, please reach out to us directly at <strong>9849080443</strong> or <strong>prohelmet.protoptye@gmail.com</strong>.</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📞 Call us: <strong>9849080443</strong><br>
+         📧 Email us: <strong>prohelmet.protoptye@gmail.com</strong></p>
+    </section>
+
+    <footer>© <span id="y"></span> ProHelmet. All rights reserved.</footer>
+  </div>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
